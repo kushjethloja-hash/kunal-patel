@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Personal Profile</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #050505;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
+
+    .glow {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: #e8a0b8;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.18;
+      animation: glow 4s infinite alternate;
+    }
+
+    .profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid #d99aaa;
+      object-fit: cover;
+      box-shadow: 0 0 35px rgba(217,154,170,0.5);
+      animation: appear 1.5s ease;
+      position: relative;
+    }
+
+    h1 {
+      margin-top: 25px;
+      font-size: 45px;
+      letter-spacing: 3px;
+      color: #e5a6b8;
+      animation: slideUp 1.5s ease;
+    }
+
+    .tagline {
+      margin-top: 12px;
+      font-size: 17px;
+      color: #eeeeee;
+      letter-spacing: 1px;
+      animation: slideUp 2s ease;
+    }
+
+    .enter-btn {
+      margin-top: 35px;
+      padding: 14px 45px;
+      border: 1px solid #e5a6b8;
+      border-radius: 50px;
+      background: transparent;
+      color: #e5a6b8;
+      font-size: 16px;
+      letter-spacing: 3px;
+      cursor: pointer;
+      transition: 0.4s;
+      animation: slideUp 2.5s ease;
+    }
+
+    .enter-btn:hover {
+      background: #e5a6b8;
+      color: #050505;
+      box-shadow: 0 0 30px rgba(229,166,184,0.6);
+      transform: scale(1.05);
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 25px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #aaa;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        transform: scale(0.9);
+        opacity: 0.12;
+      }
+      to {
+        transform: scale(1.2);
+        opacity: 0.25;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .profile {
+        width: 125px;
+        height: 125px;
+      }
+
+      .tagline {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <div class="glow"></div>
+
+    <!-- Replace this image URL with your own photo -->
+    <img
+      src="https://raw.githubusercontent.com/kushjethloja-hash/kush/main/kush.jpeg"
+      alt="KUSH"
+      class="profile"
+    >
+
+    <h1>KUSH JETHLOJA</h1>
+
+    <p class="tagline">
+      Every journey begins with one click.
+    </p>
+
+    <button class="enter-btn" onclick="enterWebsite()">
+      ENTER
+    </button>
+
+    <div class="scroll">
+      SCROLL TO EXPLORE ↓
+    </div>
+
+  </section>
+
+  <script>
+    function enterWebsite() 
+      {window.location.href="home.html";}
+  </script>
+
+</body>
+</html>
