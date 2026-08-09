@@ -1,0 +1,57 @@
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #050505;
+    color: #f5f5f5;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --gold: #d4af37;
+    --gold-light: #f3d675;
+    --white: #ffffff;
+    --text: #eeeeee;
+    --muted: #a5a5a5;
+    --dark: #050505;
+    --card: rgba(255, 255, 255, 0.055);
+    --border: rgba(212, 175, 55, 0.22);
+}
+
+
+/* =========================
+   ANIMATED BACKGROUND
+========================= */
+
+.background-animation {
+    position: fixed;
